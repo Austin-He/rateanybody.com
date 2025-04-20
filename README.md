@@ -1,4 +1,6 @@
-helps upload and search for data with the RateAnybody appname tag on arweave.
+site is at [RateAnybody](https://rateanybody.com)
+
+this site helps upload and search for data with the RateAnybody appname tag on arweave.
 for local dev you'll need to generate a wallet, then put it into base64. this is availbale by just using create wallet and convert to base 64 scripts in the scripts directory.
 then make a .env file and set WALLET_JSON_BASE64 =  the base 64 walalet. 
 
