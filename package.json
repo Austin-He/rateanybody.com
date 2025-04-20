@@ -1,0 +1,40 @@
+{
+  "name": "arweavestuff",
+  "version": "1.0.0",
+  "description": "Decentralized anonymous ratings stored on Arweave",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "NODE_ENV=production webpack",
+    "dev": "webpack --mode development",
+    "deploy": "npm run build && wrangler pages deploy public --project-name arweavestuff",
+    "clean": "rm -rf public/js/*.bundle.js public/js/*.bundle.js.map",
+    "upload": "node scripts/upload_to_arweave.js",
+    "check-balance": "node scripts/check_balance.js",
+    "create-wallet": "node scripts/create_wallet.js",
+    "get-address": "node scripts/get_address.js",
+    "view-upload": "node scripts/view_upload.js"
+  },
+  "keywords": [
+    "arweave",
+    "irys",
+    "blockchain",
+    "storage",
+    "ratings"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arweave": "^1.15.7"
+  },
+  "devDependencies": {
+    "ardb": "^1.1.10",
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.5.0",
+    "dotenv-webpack": "^8.1.0",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.9",
+    "webpack": "^5.99.6",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
+}

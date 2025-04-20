@@ -1,0 +1,11 @@
+[build]
+command = "npm run build"
+output_dir = "public"
+
+# Environment variables
+[env.production]
+# These will be set via the Cloudflare dashboard or CLI
+# wrangler pages env set WALLET_ADDRESS "your-address" --project-name arweavestuff
+
+[site]
+bucket = "./public"
